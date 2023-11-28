@@ -1,15 +1,18 @@
-/*
+
+package edu.neu.cal;
+
+import edu.neu.cal.connector.DbAccess;
+
+/**
  * @Author: Jiang Han
  * @Date: 2023-11-21 22:28:40
  * @Description: 一个可被随意修改的测试类也是主类
- */
-package edu.neu.cal;
+ **/
 
-import edu.neu.cal.Connector.DBAccess;
 
-public class test {
+public class Test {
     public static void main(String[] args) {
-        DBAccess myAccess = new DBAccess();
+        DbAccess myAccess = new DbAccess();
         myAccess.connectToDatabase();
         System.out.println(myAccess.readUsersData("name"));
         myAccess.close();

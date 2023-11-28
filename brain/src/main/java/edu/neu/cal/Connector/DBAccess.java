@@ -1,10 +1,5 @@
-/*
- * @Author: Jiang Han
- * @Date: 2023-11-21 22:06:52
- * @Description: Databse access class
- */
 
-package edu.neu.cal.Connector;
+package edu.neu.cal.connector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,14 +7,27 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBAccess {
+/**
+ * @Author: Jiang Han
+ * @Date: 2023-11-21 22:06:52
+ * @Description: Database access class
+ */
+public class DbAccess {
     private Connection connect = null;
 
-    // URL of database DO NOT change
+    /**
+     * URL of database DO NOT change
+     */
     private String databaseURL = "jdbc:mysql://calomatic-db.mysql.database.azure.com:3306/testdb";
-    // username of database DO NOT change
+
+    /**
+     * Username of database DO NOT change
+     */
     private String user = "deckard";
-    // password of database NO NOT change
+
+    /**
+     * Password of database NO NOT change
+     */
     private String password = "INFO5100@cal";
 
     /**
@@ -98,14 +106,17 @@ public class DBAccess {
             e.printStackTrace();
         } finally {
             try {
-                if (resultSet != null)
+                if (resultSet != null) {
                     resultSet.close();
-                if (statement != null)
+                }
+                if (statement != null) {
                     statement.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
+
         return "error!";
     }
 }
