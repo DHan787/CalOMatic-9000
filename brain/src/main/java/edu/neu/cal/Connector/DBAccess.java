@@ -52,6 +52,40 @@ public class DbAccess {
     }
 
     /**
+     * @description: get the connection
+     * @return {*}
+     */
+    public Connection getConnection() {
+        try {
+            // load the MySQL driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Setup the connection with the DB
+            connect = DriverManager.getConnection(databaseURL, user, password);
+            return connect;
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("MySQL driver not found");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Connection to database failed");
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void closeConnection(Connection connection) {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to close the connection");
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * @description: close the connection
      * @return {*}
      */

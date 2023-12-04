@@ -1,3 +1,21 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {}
+            },
+            "previewLimit": 50,
+            "server": "calomatic-db.mysql.database.azure.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "cal",
+            "group": "1",
+            "database": "testdb",
+            "username": "deckard",
+            "password": "INFO5100@cal"
+        }
+    ]
 }
