@@ -1,22 +1,24 @@
 package edu.neu.cal.Hongkai;
 
 public class User {
-    private String username;
+    private Integer id;
+    private String name;
     private String password;
     private String email;
 
-    public User(String username, String password, String email) {
-        this.username = username;
+    public User(int id, String name, String password, String email) {
+        this.id = id;
+        this.name = name;
         this.password = password;
         this.email = email;
     }
 
-    public String getUsername() {
-        return username;
+    public String getname() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setname(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -33,6 +35,10 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId(){
+        return id;
     }
 
 }

@@ -14,7 +14,7 @@ import edu.neu.cal.connector.DbAccess;
  * @Description: 一个可被随意修改的测试类也是主类
  **/
 
-public class Test {
+public class test {
     public static void main(String[] args) {
         DbAccess myAccess = new DbAccess();
         myAccess.connectToDatabase();
