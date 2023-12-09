@@ -7,8 +7,9 @@ package edu.neu.cal.dao;
 
 import java.sql.Connection;
 
-import edu.neu.cal.Hongkai.User;
 import edu.neu.cal.connector.DbAccess;
+import edu.neu.cal.domain.User;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -44,7 +45,7 @@ public class UserDao {
     /**
      * @description: get password by username
      * @param {String} username
-     * @return {*}  
+     * @return {*}
      */
     public String getPasswordByName(String name) {
         // 准备语句
@@ -86,7 +87,7 @@ public class UserDao {
 
     }
 
-public int getIdByName(String name) {
+    public int getIdByName(String name) {
         // 准备语句
         PreparedStatement pstmt = null;
 
@@ -126,7 +127,7 @@ public int getIdByName(String name) {
 
     }
 
-public String getEmailByName(String name) {
+    public String getEmailByName(String name) {
         // 准备语句
         PreparedStatement pstmt = null;
 
@@ -193,7 +194,7 @@ public String getEmailByName(String name) {
         String sql = "UPDATE users SET id = ?, password = ?, email = ? WHERE name = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
-            pstmt.setInt(1,user.getId());
+            pstmt.setInt(1, user.getId());
             pstmt.setString(2, user.getPassword());
             pstmt.setString(3, user.getEmail());
             pstmt.setString(4, user.getname());
@@ -201,11 +202,6 @@ public String getEmailByName(String name) {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-    }
-
-
-    public void newUser(User user){
-        user.getname();
     }
 
 }
