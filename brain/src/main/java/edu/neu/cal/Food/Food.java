@@ -1,6 +1,11 @@
+/*
+ * @Author: Jiang Han
+ * @Date: 2023-12-08 23:06:33
+ * @Description: 
+ */
 package edu.neu.cal.Food;
 
-/ 定义一个公共类Food
+// 定义一个公共类Food
 // Defines a public class named Food.
 public class Food {
     private int foodId; // 食物条目的唯一标识符 Unique identifier for the food entry
@@ -71,4 +76,3 @@ public class Food {
         this.foodFat = foodFat; // 设置脂肪含量 Set foodFat
     }
 }
-
