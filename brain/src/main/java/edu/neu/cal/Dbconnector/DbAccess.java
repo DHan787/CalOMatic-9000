@@ -1,5 +1,5 @@
 
-package edu.neu.cal.connector;
+package edu.neu.cal.Dbconnector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

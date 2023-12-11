@@ -6,7 +6,7 @@ package edu.neu.cal.test;
  * @Description: 
  */
 
-import edu.neu.cal.connector.DbAccess;
+import edu.neu.cal.Dbconnector.DbAccess;
 
 public class test {
     public static void main(String[] args) {

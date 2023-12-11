@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import edu.neu.cal.connector.DbAccess;
+import edu.neu.cal.Dbconnector.DbAccess;
 import edu.neu.cal.domain.User;
 import edu.neu.cal.utils.PassowordHashingByBCrypt;
 import edu.neu.cal.utils.TypewriterEffectPrinter;
@@ -15,13 +15,15 @@ import edu.neu.cal.utils.TypewriterEffectPrinter;
 public class authService {
 
     public static void main(String[] args) {
-
+        authUser authUser = new authUser();
         authUser.userOperation();
 
     }
 
     // user login
-    static User loginUser(Scanner scanner) {
+    public User loginUser(Scanner scanner) {
+
+        authUser authService = new authUser();
 
         Connection connection = null;
 
@@ -45,8 +47,9 @@ public class authService {
                 if (resultSet.next()) {
                     if (PassowordHashingByBCrypt
                             .checkPassword(password, resultSet.getString("password"))) {
-                        user = new User(resultSet.getString("id"), resultSet.getString("name"),
-                                resultSet.getString("email"), resultSet.getString("password"));
+                        user = new User(resultSet.getString("id"),
+                                resultSet.getString("name"),
+                                resultSet.getString("password"));
                         TypewriterEffectPrinter.print("Login successful!");
                         return user;
                     } else {
@@ -60,7 +63,7 @@ public class authService {
 
                         switch (operation) {
                             case 1:
-                                authService.registerUser(scanner);
+                                registerUser(scanner);
                                 break;
 
                             case 2:
@@ -81,7 +84,9 @@ public class authService {
     }
 
     // user register
-    public static void registerUser(Scanner scanner) {
+    public void registerUser(Scanner scanner) {
+
+        authUser authUser = new authUser();
 
         // user input the username for register
         TypewriterEffectPrinter.print("Username: ");

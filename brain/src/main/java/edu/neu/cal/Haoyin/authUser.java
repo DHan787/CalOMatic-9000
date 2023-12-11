@@ -11,36 +11,60 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import edu.neu.cal.connector.DbAccess;
+import edu.neu.cal.Dbconnector.DbAccess;
+import edu.neu.cal.domain.User;
 import edu.neu.cal.utils.PassowordHashingByBCrypt;
 import edu.neu.cal.utils.UUIDGen;
 
 public class authUser {
 
+    User user = null;
+
+    authService authService = new authService();
+
+    public User getUser() {
+        return this.user;
+    }
+
     // for user to choose login or register
-    public static void userOperation() {
+    public void userOperation() {
+        boolean operation = true;
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            int operation = scanner.nextInt();
+        while (operation) {
+            String input = scanner.nextLine();
 
-            switch (operation) {
+            // 检查用户是否输入了 "exit"
+            if ("exit".equalsIgnoreCase(input.trim())) {
+                System.out.println("Exiting...");
+                break; // 退出 while 循环
+            }
+
+            // 将输入转换为整数，用于 switch 语句
+            int CaseOperation;
+            try {
+                CaseOperation = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input, please enter a number or 'exit' to quit.");
+                continue; // 跳过当前循环的剩余部分
+            }
+
+            switch (CaseOperation) {
                 case 1:
-                    authService.loginUser(scanner);
+                    this.user = authService.loginUser(scanner);
+                    System.out.println(this.user.toString());
+                    operation = false;
                     break;
-
                 case 2:
                     authService.registerUser(scanner);
                     break;
-
                 default:
                     System.out.println("Invalid operation, re-enter!");
             }
         }
-
     }
 
     // insert the registered information into the database for login
-    public static void insertTable(String registerUsername, String registerEmail, String registerPassword) {
+    public void insertTable(String registerUsername, String registerEmail, String registerPassword) {
         Connection connection = null;
         DbAccess dbAccess = new DbAccess();
         connection = dbAccess.getConnection();

@@ -12,11 +12,20 @@ public class User {
     private String password;
     private String email;
 
+    private String hiddeString = "********";
+
     public User(String id, String name, String password, String email) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.email = email;
+    }
+
+    public User(String id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = hiddeString;
     }
 
     public String getname() {
@@ -47,4 +56,9 @@ public class User {
         return id;
     }
 
+    // toString
+    @Override
+    public String toString() {
+        return "User [email=" + email + ", id=" + id + ", name=" + name + ", password=" + password + "]";
+    }
 }

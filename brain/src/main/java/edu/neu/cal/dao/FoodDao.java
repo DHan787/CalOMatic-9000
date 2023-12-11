@@ -7,7 +7,7 @@ package edu.neu.cal.dao;
 
 import java.sql.*;
 
-import edu.neu.cal.connector.DbAccess;
+import edu.neu.cal.Dbconnector.DbAccess;
 import edu.neu.cal.domain.Food;
 
 public class FoodDao {
