@@ -206,6 +206,18 @@ public class UserProfile {
         this.bodyFatRate = bodyFatRate;
     }
 
+    // 将这tostring改成表格形式
+    public String toFormatString() {
+
+        return String.format(
+                "+------------+-----+--------+--------+--------+------+-------+--------------+\n" +
+                        "|  UserName  | Age |  Sex   | Weight | Height | BMI  |  BMR  | Body Fat Rate |\n" +
+                        "+------------+-----+--------+--------+--------+------+-------+--------------+\n" +
+                        "| %10s | %3d | %6s | %6.2f | %6.2f | %4.1f | %5.1f | %12.1f |\n" +
+                        "+------------+-----+--------+--------+--------+------+-------+--------------+",
+                userName, age, stringSex, weight, height, bmi, bmr, bodyFatRate);
+    }
+
     public String toString() {
         return "UserName:" + userName + ", Age:" + age + ", Sex:" + stringSex + ", Weight:" + weight +
                 ", Height" + height + ", BMI:" + bmi + ", BMR:" + bmr + ", Body Fat Rate:" + bodyFatRate;

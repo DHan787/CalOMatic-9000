@@ -3,7 +3,7 @@
  * @Date: 2023-12-09 18:24:31
  * @Description: 
  */
-package edu.neu.cal.Haoyin;
+package edu.neu.cal.auth;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

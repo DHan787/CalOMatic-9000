@@ -1,4 +1,4 @@
-package edu.neu.cal.Haoyin;
+package edu.neu.cal.auth;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -49,11 +49,12 @@ public class authService {
                             .checkPassword(password, resultSet.getString("password"))) {
                         user = new User(resultSet.getString("id"),
                                 resultSet.getString("name"),
-                                resultSet.getString("password"));
+                                resultSet.getString("email"));
                         TypewriterEffectPrinter.print("Login successful!");
                         return user;
                     } else {
                         TypewriterEffectPrinter.print("The username or password is incorrect. Please try again");
+                        loginUser(scanner);
                     }
                 } else {
                     TypewriterEffectPrinter.print("The username not exist. Do you want to register?");
