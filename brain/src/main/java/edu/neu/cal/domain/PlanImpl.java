@@ -83,4 +83,8 @@ public class PlanImpl {
                 ", weightRecord=" + Arrays.toString(weightRecord) +
                 '}';
     }
+
+    public double[] getPlanCalorieIntake() {
+        return null;
+    }
 }

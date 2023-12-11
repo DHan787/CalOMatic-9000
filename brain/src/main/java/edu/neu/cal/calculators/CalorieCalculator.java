@@ -24,7 +24,7 @@ public class CalorieCalculator {
      * @return The total calorie intake for the day.
      */
     public double calculateDailyCalorieIntake(int day) {
-        PlanImpl plan = dataFromDB.getPlan(); 
+        PlanImpl plan = dataFromDB.getPlan();
         if (day < 1 || day > plan.getActualCalorieIntake().length) {
             throw new IllegalArgumentException("Invalid day: " + day);
         }
@@ -37,7 +37,7 @@ public class CalorieCalculator {
      * @return The average daily calorie intake.
      */
     public double calculateAverageCalorieIntake() {
-        PlanImpl plan = dataFromDB.getPlan(); 
+        PlanImpl plan = dataFromDB.getPlan();
         double[] calorieIntakes = plan.getActualCalorieIntake();
         double total = 0;
         for (double intake : calorieIntakes) {
@@ -47,20 +47,20 @@ public class CalorieCalculator {
     }
 
     /**
-     * Compares actual calorie intake with the planned calorie intake for a specific day.
+     * Compares actual calorie intake with the planned calorie intake for a specific
+     * day.
      * 
      * @param day The day to compare calorie intake.
      * @return The difference between actual and planned calorie intake.
      */
     public double compareWithPlanCalorieIntake(int day) {
-        PlanImpl plan = dataFromDB.getPlan(); 
+        PlanImpl plan = dataFromDB.getPlan();
         if (day < 1 || day > plan.getActualCalorieIntake().length) {
             throw new IllegalArgumentException("Invalid day: " + day);
         }
         double actualIntake = plan.getActualCalorieIntake()[day - 1];
-        double plannedIntake = plan.getPlanCalorieIntake()[day - 1]; 
+        double plannedIntake = plan.getPlanCalorieIntake()[day - 1];
         return actualIntake - plannedIntake;
     }
-
 
 }

@@ -7,6 +7,7 @@
 package edu.neu.cal.calculators;
 
 import edu.neu.cal.domain.Food;
+import edu.neu.cal.domain.PlanImpl;
 import edu.neu.cal.domain.User;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -34,16 +35,16 @@ public class DataFromDB {
         List<Food> foods = new ArrayList<>();
 
         try (Connection conn = connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql);
-             ResultSet rs = pstmt.executeQuery()) {
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                ResultSet rs = pstmt.executeQuery()) {
 
             while (rs.next()) {
                 Food food = new Food(rs.getInt("id"),
-                                     rs.getString("name"),
-                                     rs.getInt("calories"),
-                                     rs.getDouble("protein"),
-                                     rs.getDouble("carbs"),
-                                     rs.getDouble("fat"));
+                        rs.getString("name"),
+                        rs.getInt("calories"),
+                        rs.getDouble("protein"),
+                        rs.getDouble("carbs"),
+                        rs.getDouble("fat"));
                 foods.add(food);
             }
         } catch (SQLException e) {
@@ -57,12 +58,13 @@ public class DataFromDB {
     public User getUserByName(String username) {
         String sql = "SELECT * FROM users WHERE name = ?";
         try (Connection conn = connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, username);
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
-                    return new User(rs.getInt("id"), rs.getString("name"), rs.getString("password"), rs.getString("email"));
+                    return new User(rs.getString("id"), rs.getString("name"), rs.getString("password"),
+                            rs.getString("email"));
                 }
             }
         } catch (SQLException e) {
@@ -75,7 +77,7 @@ public class DataFromDB {
     public void addUser(User user) {
         String sql = "INSERT INTO users (name, password, email) VALUES (?, ?, ?)";
         try (Connection conn = connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, user.getname());
             pstmt.setString(2, user.getPassword());
@@ -86,6 +88,8 @@ public class DataFromDB {
         }
     }
 
-
+    public PlanImpl getPlan() {
+        return null;
+    }
 
 }

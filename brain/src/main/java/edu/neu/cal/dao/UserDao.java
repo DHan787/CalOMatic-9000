@@ -194,7 +194,7 @@ public class UserDao {
         String sql = "UPDATE users SET id = ?, password = ?, email = ? WHERE name = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
-            pstmt.setInt(1, user.getId());
+            pstmt.setString(1, user.getId());
             pstmt.setString(2, user.getPassword());
             pstmt.setString(3, user.getEmail());
             pstmt.setString(4, user.getname());
