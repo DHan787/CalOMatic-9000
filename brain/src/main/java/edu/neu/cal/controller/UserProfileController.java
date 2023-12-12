@@ -125,8 +125,10 @@ public class UserProfileController {
                         break;
                     case 3:
                         modifyHeight();
+                        break;
                     case 4:
                         modifyWeight();
+                        break;
                     case 5:
                         return;
                     default:
@@ -160,7 +162,7 @@ public class UserProfileController {
         } else {
             TypewriterEffectPrinter.println("Invalid input, please try again.");
         }
-        scanner.close();
+        // scanner.close();
     }
 
     private static void modifyWeight() {
