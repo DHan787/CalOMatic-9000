@@ -93,7 +93,8 @@ public class UserProfileController {
                 TypewriterEffectPrinter.println("2. Change your age");
                 TypewriterEffectPrinter.println("3. Change your height");
                 TypewriterEffectPrinter.println("4. Change your weight");
-                TypewriterEffectPrinter.println("5. Back to previous menu");
+                TypewriterEffectPrinter.println("5. Change your bodyfatrate ");
+                TypewriterEffectPrinter.println("6. Back to previous menu");
 
                 String input = "";
                 if (scanner.hasNext()) {
@@ -130,6 +131,10 @@ public class UserProfileController {
                         modifyWeight();
                         break;
                     case 5:
+                        modifyBodyfatrate();
+                        break;
+                    case 6:
+                        operation = false;
                         return;
                     default:
                         TypewriterEffectPrinter.println("Invalid input, please try again.");
@@ -137,6 +142,30 @@ public class UserProfileController {
                 }
                 // scanner.close();
             }
+        }
+    }
+
+    private static void modifyBodyfatrate() {
+        user = CalOMatic9000.getUser();
+        Scanner scanner = new Scanner(System.in);
+        TypewriterEffectPrinter.println("Please enter your new bodyfatrate:");
+        String input = scanner.next();
+        while (!InputHandler.handleInput(input, Double.class, Double::valueOf)) {
+            TypewriterEffectPrinter.println("Input incorrect, Please enter your new bodyfatrate:");
+            input = scanner.next();
+        }
+        double newBodyfatrate = Double.parseDouble(input);
+        TypewriterEffectPrinter.println("Do you want to change your bodyfatrate to " + newBodyfatrate + "?");
+        TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
+        input = scanner.next();
+        if ("yes".equalsIgnoreCase(input.trim())) {
+            UserProfileDao userProfileDao = new UserProfileDao();
+            userProfileDao.updateBodyfatrate(user.getname(), newBodyfatrate);
+            userProfileDao.close();
+        } else if ("no".equalsIgnoreCase(input.trim())) {
+            TypewriterEffectPrinter.println("Now redirect to previous menu!");
+        } else {
+            TypewriterEffectPrinter.println("Invalid input, please try again.");
         }
     }
 
@@ -215,7 +244,7 @@ public class UserProfileController {
         } else {
             TypewriterEffectPrinter.println("Now redirect to previous menu!");
         }
-        scanner.close();
+        // scanner.close();
     }
 
     private static void addUserProfile() {
@@ -301,21 +330,16 @@ public class UserProfileController {
         String newName = scanner.nextLine();
         String newname = newName.trim();
         TypewriterEffectPrinter.println("Do you want to change your name to " + newname + "?");
-        TypewriterEffectPrinter.println("Do you want to change your username as well?");
         TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
         String input = scanner.nextLine();
         if ("yes".equalsIgnoreCase(input.trim())) {
             user.setname(newname);
+            System.out.println(user.getname());
             UserProfileDao userProfileDao = new UserProfileDao();
-            UserDao userDao = new UserDao();
-            userDao.modidifyName(user.getname(), newname);
-            userProfileDao.updateName(user.getname(), newname);
+            userProfileDao.updateName(user.getId(), newname);
             userProfileDao.close();
         } else if ("no".equalsIgnoreCase(input.trim())) {
-            user.setname(newname);
-            UserProfileDao userProfileDao = new UserProfileDao();
-            userProfileDao.updateName(user.getname(), newname);
-            userProfileDao.close();
+            TypewriterEffectPrinter.println("Now redirect to previous menu!");
         } else {
             TypewriterEffectPrinter.println("Invalid input, please try again.");
         }

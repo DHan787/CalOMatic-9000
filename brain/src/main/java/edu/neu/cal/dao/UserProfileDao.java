@@ -100,11 +100,11 @@ public class UserProfileDao {
         }
     }
 
-    public void updateName(String name, String newName) {
-        String sql = "UPDATE userprofile SET name = ? WHERE name = ?";
+    public void updateName(String id, String newName) {
+        String sql = "UPDATE userprofile SET name = ? WHERE id = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, newName);
-            pstmt.setString(2, name);
+            pstmt.setString(2, id);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -224,5 +224,16 @@ public class UserProfileDao {
         }
 
         return false;
+    }
+
+    public void updateBodyfatrate(String getname, double newBodyfatrate) {
+        String sql = "UPDATE userprofile SET bodyfatrate = ? WHERE name = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setDouble(1, newBodyfatrate);
+            pstmt.setString(2, getname);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
