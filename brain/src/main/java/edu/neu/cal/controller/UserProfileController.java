@@ -202,7 +202,7 @@ public class UserProfileController {
         TypewriterEffectPrinter.println("Do you want to change your age to " + newAge + "?");
         TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
         input = scanner.next();
-        while (input != "yes" || input != "no") {
+        while (input != "yes" && input != "no") {
             TypewriterEffectPrinter.println("Invalid input, please try again.");
             input = scanner.next();
         }
@@ -317,6 +317,6 @@ public class UserProfileController {
         } else {
             TypewriterEffectPrinter.println("Invalid input, please try again.");
         }
-        scanner.close();
+        // scanner.close();
     }
 }
