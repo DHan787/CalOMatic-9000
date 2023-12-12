@@ -31,7 +31,7 @@ public class UserProfileController {
             boolean operation = true;
             while (operation) {
 
-                TypewriterEffectPrinter.println("Please select your operation:");
+                TypewriterEffectPrinter.println("\nPlease select your operation:");
                 TypewriterEffectPrinter.println("1. View your profile.");
                 TypewriterEffectPrinter.println("2. Modify your profile");
                 TypewriterEffectPrinter.println("3. Back to previous menu");
@@ -233,23 +233,20 @@ public class UserProfileController {
         TypewriterEffectPrinter.println("Do you want to change your age to " + newAge + "?");
         TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
         input = scanner.next();
-        while (input != "yes" && input != "no") {
-            TypewriterEffectPrinter.println("Invalid input, please try again.");
-            input = scanner.next();
-        }
         if ("yes".equalsIgnoreCase(input.trim())) {
             UserProfileDao userProfileDao = new UserProfileDao();
             userProfileDao.updateAge(user.getname(), newAge);
             userProfileDao.close();
-        } else {
+        } else if ("no".equalsIgnoreCase(input.trim())) {
             TypewriterEffectPrinter.println("Now redirect to previous menu!");
+        } else {
+            TypewriterEffectPrinter.println("Invalid input, please try again.");
         }
         // scanner.close();
     }
 
     private static void addUserProfile() {
         user = CalOMatic9000.getUser();
-        System.out.println(user.toString());
         Scanner scanner = new Scanner(System.in);
         TypewriterEffectPrinter.println("Please enter your age:");
         String input = scanner.next();
@@ -262,7 +259,7 @@ public class UserProfileController {
         TypewriterEffectPrinter.println("Please enter your height:");
         input = scanner.next();
         while (!InputHandler.handleInput(input, Double.class, Double::valueOf)) {
-            TypewriterEffectPrinter.println("Input incorrect, Please enter your height:");
+            TypewriterEffectPrinter.println("Input incorrect, Please enter your height:(m)");
             input = scanner.next();
         }
         double height = Double.parseDouble(input);
@@ -270,7 +267,7 @@ public class UserProfileController {
         TypewriterEffectPrinter.println("Please enter your weight:");
         input = scanner.next();
         while (!InputHandler.handleInput(input, Double.class, Double::valueOf)) {
-            TypewriterEffectPrinter.println("Input incorrect, Please enter your weight:");
+            TypewriterEffectPrinter.println("Input incorrect, Please enter your weight:(KG)");
             input = scanner.next();
         }
         double weight = Double.parseDouble(input);
@@ -292,7 +289,6 @@ public class UserProfileController {
             input = scanner.next();
         }
         double bodyfatrate = Double.parseDouble(input);
-        System.out.println(user.getId());
         UserProfile userProfile = new UserProfile(user.getId(), age, sex, user.getname(), weight, height, bodyfatrate);
         UserProfileDao userProfileDao = new UserProfileDao();
         TypewriterEffectPrinter.println("Adding user profile...");
@@ -334,7 +330,6 @@ public class UserProfileController {
         String input = scanner.nextLine();
         if ("yes".equalsIgnoreCase(input.trim())) {
             user.setname(newname);
-            System.out.println(user.getname());
             UserProfileDao userProfileDao = new UserProfileDao();
             userProfileDao.updateName(user.getId(), newname);
             userProfileDao.close();

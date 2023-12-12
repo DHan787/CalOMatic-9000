@@ -25,7 +25,7 @@ public class AdvisorController {
         userprofiledao = new UserProfileDao();
         userprofile = new UserProfile();
         userprofile = userprofiledao.getUserProfileByName(user.getname());
-        TypewriterEffectPrinter.println("I am your personal advisor.");
+        TypewriterEffectPrinter.println("\nI am your personal advisor.");
         TypewriterEffectPrinter.println("I will help you to make a healthy diet plan.");
         TypewriterEffectPrinter.println("Here is your eating suggestion:");
         HealthGoalPlan healthGoalPlan = new HealthGoalPlan(userprofile);

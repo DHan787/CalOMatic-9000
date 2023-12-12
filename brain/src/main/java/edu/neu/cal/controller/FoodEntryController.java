@@ -34,7 +34,7 @@ public class FoodEntryController {
         // ask the user how much do they have today
 
         Scanner scanner = new Scanner(System.in);
-        TypewriterEffectPrinter.println("What do you have today?");
+        TypewriterEffectPrinter.println("\nWhat do you have today?");
 
         Boolean operation = true;
 
@@ -50,12 +50,12 @@ public class FoodEntryController {
             }
             // 检查用户是否输入了 "exit"
             if ("exit".equalsIgnoreCase(input.trim())) {
-                System.out.println("Exiting...");
+                TypewriterEffectPrinter.println("Exiting...");
                 break; // 退出 while 循环
             }
             foodEntry = new FoodEntry();
             if (foodEntry.findFood(input)) {
-                TypewriterEffectPrinter.println("How much do you have?");
+                TypewriterEffectPrinter.println("How much do you have?(gram)");
                 String amount = "";
                 if (scanner.hasNext()) {
                     amount = scanner.nextLine();

@@ -23,15 +23,12 @@ public class CalOMatic9000 {
     // setter
     public static void setUser(User user) {
         CalOMatic9000.user = user;
-        System.out.println("setUser");
-        System.out.println(user.toString());
     }
 
     public static void main(String[] args) {
         authUser authUser = new authUser();
         showWelcomeScreen.showWelcomeScreen();
         authUser.userOperation();
-        System.out.println(user.toString());
         UserProfileController userProfileController = new UserProfileController();
         afterLoginService.afterLogin();
         // say goodbye to the user

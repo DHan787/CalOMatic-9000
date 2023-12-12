@@ -39,7 +39,7 @@ public class afterLoginService {
         try (Scanner scanner = new Scanner(System.in)) {
             while (operation) {
 
-                TypewriterEffectPrinter.println("What can CalOMatic do for you?");
+                TypewriterEffectPrinter.println("\nWhat can CalOMatic do for you?");
                 TypewriterEffectPrinter.println("1. Check or change the user profile");
                 TypewriterEffectPrinter.println("2. Check the calories intake history");
                 TypewriterEffectPrinter.println("3. Input the food you eat today");

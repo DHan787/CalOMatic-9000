@@ -135,9 +135,8 @@ public class HealthGoalPlanImpl {
     }
 
     public String toString() {
-        return "PlanImpl{" +
-                "plan = " + plan +
-                ", actualCalorieIntake = " + Arrays.toString(actualCalorieIntake) +
+        return plan +
+                "\n actualCalorieIntake = \n" + Arrays.toString(actualCalorieIntake) +
                 '}';
     }
 }

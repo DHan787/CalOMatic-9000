@@ -5,10 +5,12 @@
  */
 package edu.neu.cal.domain;
 
+import edu.neu.cal.utils.TypewriterEffectPrinter;
+
 // 定义一个公共类PrintContent
 
 public class PrintContent {
-    public void c10(){
+    public void c10() {
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
         String dinner = "Dinner:";
@@ -39,36 +41,36 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Pancake (100g): %d calories%n", pancake);
-        System.out.printf("- Maple syrup (20g): %d calories%n", syrup);
-        System.out.printf("- Bacon (50g): %d calories%n", bacon);
-        System.out.printf("- Milk (200ml): %d calories%n", milk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Pancake (100g): %d calories%n", pancake);
+        TypewriterEffectPrinter.printf("- Maple syrup (20g): %d calories%n", syrup);
+        TypewriterEffectPrinter.printf("- Bacon (50g): %d calories%n", bacon);
+        TypewriterEffectPrinter.printf("- Milk (200ml): %d calories%n", milk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Beef soup (200g): %d calories%n", soup);
-        System.out.printf("- Steamed bun (100g): %d calories%n", bun);
-        System.out.printf("- Spinach (100g): %d calories%n", spinach);
-        System.out.printf("- Rice drink (200ml): %d calories%n", riceDrink);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Beef soup (200g): %d calories%n", soup);
+        TypewriterEffectPrinter.printf("- Steamed bun (100g): %d calories%n", bun);
+        TypewriterEffectPrinter.printf("- Spinach (100g): %d calories%n", spinach);
+        TypewriterEffectPrinter.printf("- Rice drink (200ml): %d calories%n", riceDrink);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Mediterranean grilled salmon (100g): %d calories%n", salmon);
-        System.out.printf("- Potato (100g): %d calories%n", potato);
-        System.out.printf("- Carrot (100g): %d calories%n", carrot);
-        System.out.printf("- Lemon juice (200ml): %d calories%n", lemonJuice);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Mediterranean grilled salmon (100g): %d calories%n", salmon);
+        TypewriterEffectPrinter.printf("- Potato (100g): %d calories%n", potato);
+        TypewriterEffectPrinter.printf("- Carrot (100g): %d calories%n", carrot);
+        TypewriterEffectPrinter.printf("- Lemon juice (200ml): %d calories%n", lemonJuice);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Pecans (10g): %d calories%n", pecans);
-        System.out.printf("- Pineapple (100g): %d calories%n", pineapple);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Pecans (10g): %d calories%n", pecans);
+        TypewriterEffectPrinter.printf("- Pineapple (100g): %d calories%n", pineapple);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c11(){
+    public void c11() {
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
         String dinner = "Dinner:";
@@ -100,36 +102,36 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Corn bread (50g): %d calories%n", cornBread);
-        System.out.printf("- Ham (50g): %d calories%n", ham);
-        System.out.printf("- Orange (150g): %d calories%n", orange);
-        System.out.printf("- Soy milk (200ml): %d calories%n", soyMilk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Corn bread (50g): %d calories%n", cornBread);
+        TypewriterEffectPrinter.printf("- Ham (50g): %d calories%n", ham);
+        TypewriterEffectPrinter.printf("- Orange (150g): %d calories%n", orange);
+        TypewriterEffectPrinter.printf("- Soy milk (200ml): %d calories%n", soyMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Spicy shredded potato (150g): %d calories%n", potato);
-        System.out.printf("- Noodles (100g): %d calories%n", noodles);
-        System.out.printf("- Lettuce (100g): %d calories%n", lettuce);
-        System.out.printf("- Juice (200ml): %d calories%n", juice);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Spicy shredded potato (150g): %d calories%n", potato);
+        TypewriterEffectPrinter.printf("- Noodles (100g): %d calories%n", noodles);
+        TypewriterEffectPrinter.printf("- Lettuce (100g): %d calories%n", lettuce);
+        TypewriterEffectPrinter.printf("- Juice (200ml): %d calories%n", juice);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Roasted chicken breast (100g): %d calories%n", chicken);
-        System.out.printf("- Carrot (100g): %d calories%n", carrot);
-        System.out.printf("- Mushroom (100g): %d calories%n", mushroom);
-        System.out.printf("- Green tea (200ml): %d calorie%n", greenTea);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Roasted chicken breast (100g): %d calories%n", chicken);
+        TypewriterEffectPrinter.printf("- Carrot (100g): %d calories%n", carrot);
+        TypewriterEffectPrinter.printf("- Mushroom (100g): %d calories%n", mushroom);
+        TypewriterEffectPrinter.printf("- Green tea (200ml): %d calorie%n", greenTea);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Peanuts (10g): %d calories%n", peanuts);
-        System.out.printf("- Strawberries (100g): %d calories%n", strawberries);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Peanuts (10g): %d calories%n", peanuts);
+        TypewriterEffectPrinter.printf("- Strawberries (100g): %d calories%n", strawberries);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
-    
-    public void c12(){
+
+    public void c12() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -162,36 +164,36 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Whole wheat bread (100g): %d calories%n", bread);
-        System.out.printf("- Cheese (50g): %d calories%n", cheese);
-        System.out.printf("- Banana (150g): %d calories%n", banana);
-        System.out.printf("- Black soy milk (200ml): %d calories%n", soyMilk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Whole wheat bread (100g): %d calories%n", bread);
+        TypewriterEffectPrinter.printf("- Cheese (50g): %d calories%n", cheese);
+        TypewriterEffectPrinter.printf("- Banana (150g): %d calories%n", banana);
+        TypewriterEffectPrinter.printf("- Black soy milk (200ml): %d calories%n", soyMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Tomato scrambled eggs (150g): %d calories%n", eggs);
-        System.out.printf("- Rice (100g): %d calories%n", rice);
-        System.out.printf("- Rapeseed (100g): %d calories%n", rapeseed);
-        System.out.printf("- Yogurt (100g): %d calories%n", yogurt);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Tomato scrambled eggs (150g): %d calories%n", eggs);
+        TypewriterEffectPrinter.printf("- Rice (100g): %d calories%n", rice);
+        TypewriterEffectPrinter.printf("- Rapeseed (100g): %d calories%n", rapeseed);
+        TypewriterEffectPrinter.printf("- Yogurt (100g): %d calories%n", yogurt);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Grilled sea bass (100g): %d calories%n", seaBass);
-        System.out.printf("- Sweet potato (100g): %d calories%n", sweetPotato);
-        System.out.printf("- Broccoli (100g): %d calories%n", broccoli);
-        System.out.printf("- Honey water (200ml): %d calories%n", honeyWater);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Grilled sea bass (100g): %d calories%n", seaBass);
+        TypewriterEffectPrinter.printf("- Sweet potato (100g): %d calories%n", sweetPotato);
+        TypewriterEffectPrinter.printf("- Broccoli (100g): %d calories%n", broccoli);
+        TypewriterEffectPrinter.printf("- Honey water (200ml): %d calories%n", honeyWater);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Walnuts (10g): %d calories%n", walnuts);
-        System.out.printf("- Grapes (100g): %d calories%n", grapes);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Walnuts (10g): %d calories%n", walnuts);
+        TypewriterEffectPrinter.printf("- Grapes (100g): %d calories%n", grapes);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c13(){
+    public void c13() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -223,35 +225,35 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Whole wheat bread (100g): %d calories%n", bread);
-        System.out.printf("- Cheese (50g): %d calories%n", cheese);
-        System.out.printf("- Banana (150g): %d calories%n", banana);
-        System.out.printf("- Black soy milk (200ml): %d calories%n", soyMilk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Whole wheat bread (100g): %d calories%n", bread);
+        TypewriterEffectPrinter.printf("- Cheese (50g): %d calories%n", cheese);
+        TypewriterEffectPrinter.printf("- Banana (150g): %d calories%n", banana);
+        TypewriterEffectPrinter.printf("- Black soy milk (200ml): %d calories%n", soyMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Tomato meat sauce spaghetti (150g): %d calories%n", spaghetti);
-        System.out.printf("- Mixed salad (150g): %d calories%n", salad);
-        System.out.printf("- Apple cider vinegar (200ml): %d calories%n", vinegar);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Tomato meat sauce spaghetti (150g): %d calories%n", spaghetti);
+        TypewriterEffectPrinter.printf("- Mixed salad (150g): %d calories%n", salad);
+        TypewriterEffectPrinter.printf("- Apple cider vinegar (200ml): %d calories%n", vinegar);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Lemongrass grilled tilapia (100g): %d calories%n", tilapia);
-        System.out.printf("- Quinoa (100g): %d calories%n", quinoa);
-        System.out.printf("- Tomato (100g): %d calories%n", tomato);
-        System.out.printf("- Coconut milk (200ml): %d calories%n", coconutMilk);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Lemongrass grilled tilapia (100g): %d calories%n", tilapia);
+        TypewriterEffectPrinter.printf("- Quinoa (100g): %d calories%n", quinoa);
+        TypewriterEffectPrinter.printf("- Tomato (100g): %d calories%n", tomato);
+        TypewriterEffectPrinter.printf("- Coconut milk (200ml): %d calories%n", coconutMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Cashews (10g): %d calories%n", cashews);
-        System.out.printf("- Cherry (100g): %d calories%n", cherry);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Cashews (10g): %d calories%n", cashews);
+        TypewriterEffectPrinter.printf("- Cherry (100g): %d calories%n", cherry);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c14(){
+    public void c14() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -283,35 +285,35 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Baguette (100g): %d calories%n", baguette);
-        System.out.printf("- Butter (10g): %d calories%n", butter);
-        System.out.printf("- Strawberry jam (20g): %d calories%n", jam);
-        System.out.printf("- Orange juice (200ml): %d calories%n", orangeJuice);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Baguette (100g): %d calories%n", baguette);
+        TypewriterEffectPrinter.printf("- Butter (10g): %d calories%n", butter);
+        TypewriterEffectPrinter.printf("- Strawberry jam (20g): %d calories%n", jam);
+        TypewriterEffectPrinter.printf("- Orange juice (200ml): %d calories%n", orangeJuice);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Chicken salad (150g): %d calories%n", chickenSalad);
-        System.out.printf("- Rice cake (100g): %d calories%n", riceCake);
-        System.out.printf("- Cucumber (100g): %d calories%n", cucumber);
-        System.out.printf("- Soy milk (200ml): %d calories%n", soyMilk);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Chicken salad (150g): %d calories%n", chickenSalad);
+        TypewriterEffectPrinter.printf("- Rice cake (100g): %d calories%n", riceCake);
+        TypewriterEffectPrinter.printf("- Cucumber (100g): %d calories%n", cucumber);
+        TypewriterEffectPrinter.printf("- Soy milk (200ml): %d calories%n", soyMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Spanish seafood rice (150g): %d calories%n", seafoodRice);
-        System.out.printf("- Boiled broccoli (100g): %d calories%n", broccoli);
-        System.out.printf("- Yogurt (100g): %d calories%n", yogurt);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Spanish seafood rice (150g): %d calories%n", seafoodRice);
+        TypewriterEffectPrinter.printf("- Boiled broccoli (100g): %d calories%n", broccoli);
+        TypewriterEffectPrinter.printf("- Yogurt (100g): %d calories%n", yogurt);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Sunflower seeds (10g): %d calories%n", sunflowerSeeds);
-        System.out.printf("- Grapefruit (150g): %d calories%n", grapefruit);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Sunflower seeds (10g): %d calories%n", sunflowerSeeds);
+        TypewriterEffectPrinter.printf("- Grapefruit (150g): %d calories%n", grapefruit);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c15(){
+    public void c15() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -344,36 +346,36 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Pancake (100g): %d calories%n", pancake);
-        System.out.printf("- Maple syrup (20g): %d calories%n", syrup);
-        System.out.printf("- Bacon (50g): %d calories%n", bacon);
-        System.out.printf("- Milk (200ml): %d calories%n", milk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Pancake (100g): %d calories%n", pancake);
+        TypewriterEffectPrinter.printf("- Maple syrup (20g): %d calories%n", syrup);
+        TypewriterEffectPrinter.printf("- Bacon (50g): %d calories%n", bacon);
+        TypewriterEffectPrinter.printf("- Milk (200ml): %d calories%n", milk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Beef soup (200g): %d calories%n", soup);
-        System.out.printf("- Steamed bun (100g): %d calories%n", bun);
-        System.out.printf("- Spinach (100g): %d calories%n", spinach);
-        System.out.printf("- Rice drink (200ml): %d calories%n", riceDrink);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Beef soup (200g): %d calories%n", soup);
+        TypewriterEffectPrinter.printf("- Steamed bun (100g): %d calories%n", bun);
+        TypewriterEffectPrinter.printf("- Spinach (100g): %d calories%n", spinach);
+        TypewriterEffectPrinter.printf("- Rice drink (200ml): %d calories%n", riceDrink);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Mediterranean grilled salmon (100g): %d calories%n", salmon);
-        System.out.printf("- Potato (100g): %d calories%n", potato);
-        System.out.printf("- Carrot (100g): %d calories%n", carrot);
-        System.out.printf("- Lemon juice (200ml): %d calories%n", lemonJuice);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Mediterranean grilled salmon (100g): %d calories%n", salmon);
+        TypewriterEffectPrinter.printf("- Potato (100g): %d calories%n", potato);
+        TypewriterEffectPrinter.printf("- Carrot (100g): %d calories%n", carrot);
+        TypewriterEffectPrinter.printf("- Lemon juice (200ml): %d calories%n", lemonJuice);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Pecans (10g): %d calories%n", pecans);
-        System.out.printf("- Pineapple (100g): %d calories%n", pineapple);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Pecans (10g): %d calories%n", pecans);
+        TypewriterEffectPrinter.printf("- Pineapple (100g): %d calories%n", pineapple);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c16(){
+    public void c16() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -405,35 +407,35 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Homemade egg sandwich (150g): %d calories%n", eggSandwich);
-        System.out.printf("- Butter (10g): %d calories%n", butter);
-        System.out.printf("- Strawberry jam (20g): %d calories%n", jam);
-        System.out.printf("- Milk (200ml): %d calories%n", milk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Homemade egg sandwich (150g): %d calories%n", eggSandwich);
+        TypewriterEffectPrinter.printf("- Butter (10g): %d calories%n", butter);
+        TypewriterEffectPrinter.printf("- Strawberry jam (20g): %d calories%n", jam);
+        TypewriterEffectPrinter.printf("- Milk (200ml): %d calories%n", milk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Korean stone pot mixed rice (150g): %d calories%n", mixedRice);
-        System.out.printf("- Cucumber (100g): %d calories%n", cucumber);
-        System.out.printf("- Yogurt (100g): %d calories%n", yogurt);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Korean stone pot mixed rice (150g): %d calories%n", mixedRice);
+        TypewriterEffectPrinter.printf("- Cucumber (100g): %d calories%n", cucumber);
+        TypewriterEffectPrinter.printf("- Yogurt (100g): %d calories%n", yogurt);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Spanish seafood rice (150g): %d calories%n", seafoodRice);
-        System.out.printf("- Boiled broccoli (100g): %d calories%n", broccoli);
-        System.out.printf("- Milk (200ml): %d calories%n", milk2);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Spanish seafood rice (150g): %d calories%n", seafoodRice);
+        TypewriterEffectPrinter.printf("- Boiled broccoli (100g): %d calories%n", broccoli);
+        TypewriterEffectPrinter.printf("- Milk (200ml): %d calories%n", milk2);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Dried walnuts (50g): %d calories%n", walnuts);
-        System.out.printf("- Sunflower seeds (10g): %d calories%n", sunflowerSeeds);
-        System.out.printf("- Grapefruit (150g): %d calories%n", grapefruit);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Dried walnuts (50g): %d calories%n", walnuts);
+        TypewriterEffectPrinter.printf("- Sunflower seeds (10g): %d calories%n", sunflowerSeeds);
+        TypewriterEffectPrinter.printf("- Grapefruit (150g): %d calories%n", grapefruit);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c17(){
+    public void c17() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -471,41 +473,41 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Oatmeal (100g): %d calories%n", oatmeal);
-        System.out.printf("- Egg (50g): %d calories%n", egg);
-        System.out.printf("- Bacon (50g): %d calories%n", bacon);
-        System.out.printf("- Apple (150g): %d calories%n", apple);
-        System.out.printf("- Milk (200ml): %d calories%n", milk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Oatmeal (100g): %d calories%n", oatmeal);
+        TypewriterEffectPrinter.printf("- Egg (50g): %d calories%n", egg);
+        TypewriterEffectPrinter.printf("- Bacon (50g): %d calories%n", bacon);
+        TypewriterEffectPrinter.printf("- Apple (150g): %d calories%n", apple);
+        TypewriterEffectPrinter.printf("- Milk (200ml): %d calories%n", milk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Tomato scrambled eggs (150g): %d calories%n", tomatoEggs);
-        System.out.printf("- Rice (100g): %d calories%n", rice);
-        System.out.printf("- Rapeseed (100g): %d calories%n", rapeseed);
-        System.out.printf("- Yogurt (100g): %d calories%n", yogurt);
-        System.out.printf("- Juice (200ml): %d calories%n", juice);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Tomato scrambled eggs (150g): %d calories%n", tomatoEggs);
+        TypewriterEffectPrinter.printf("- Rice (100g): %d calories%n", rice);
+        TypewriterEffectPrinter.printf("- Rapeseed (100g): %d calories%n", rapeseed);
+        TypewriterEffectPrinter.printf("- Yogurt (100g): %d calories%n", yogurt);
+        TypewriterEffectPrinter.printf("- Juice (200ml): %d calories%n", juice);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Roasted chicken breast (100g): %d calories%n", chicken);
-        System.out.printf("- Quinoa (100g): %d calories%n", quinoa);
-        System.out.printf("- Broccoli (100g): %d calories%n", broccoli);
-        System.out.printf("- Lemon juice (200ml): %d calories%n", lemonJuice);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Roasted chicken breast (100g): %d calories%n", chicken);
+        TypewriterEffectPrinter.printf("- Quinoa (100g): %d calories%n", quinoa);
+        TypewriterEffectPrinter.printf("- Broccoli (100g): %d calories%n", broccoli);
+        TypewriterEffectPrinter.printf("- Lemon juice (200ml): %d calories%n", lemonJuice);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Dried figs (50g): %d calories%n", figs);
-        System.out.printf("- Almonds (10g): %d calories%n", almonds);
-        System.out.printf("- Blueberries (100g): %d calories%n", blueberries);
-        System.out.printf("- Cashews (10g): %d calories%n", cashews);
-        System.out.printf("- Cherry (100g): %d calories%n", cherry);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Dried figs (50g): %d calories%n", figs);
+        TypewriterEffectPrinter.printf("- Almonds (10g): %d calories%n", almonds);
+        TypewriterEffectPrinter.printf("- Blueberries (100g): %d calories%n", blueberries);
+        TypewriterEffectPrinter.printf("- Cashews (10g): %d calories%n", cashews);
+        TypewriterEffectPrinter.printf("- Cherry (100g): %d calories%n", cherry);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c18(){
+    public void c18() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -541,39 +543,39 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Steamed bun (100g): %d calories%n", steamedBun);
-        System.out.printf("- Cheese (50g): %d calories%n", cheese);
-        System.out.printf("- Banana (150g): %d calories%n", banana);
-        System.out.printf("- Black soy milk (200ml): %d calories%n", soyMilk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Steamed bun (100g): %d calories%n", steamedBun);
+        TypewriterEffectPrinter.printf("- Cheese (50g): %d calories%n", cheese);
+        TypewriterEffectPrinter.printf("- Banana (150g): %d calories%n", banana);
+        TypewriterEffectPrinter.printf("- Black soy milk (200ml): %d calories%n", soyMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Tomato with dragon fish (150g): %d calories%n", tomatoFish);
-        System.out.printf("- Rice cake (100g): %d calories%n", riceCake);
-        System.out.printf("- Cucumber (100g): %d calories%n", cucumber);
-        System.out.printf("- Yogurt (100g): %d calories%n", yogurt);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Tomato with dragon fish (150g): %d calories%n", tomatoFish);
+        TypewriterEffectPrinter.printf("- Rice cake (100g): %d calories%n", riceCake);
+        TypewriterEffectPrinter.printf("- Cucumber (100g): %d calories%n", cucumber);
+        TypewriterEffectPrinter.printf("- Yogurt (100g): %d calories%n", yogurt);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Kale turkey roll (150g): %d calories%n", kaleTurkey);
-        System.out.printf("- Millet rice (100g): %d calories%n", milletRice);
-        System.out.printf("- Tomato (100g): %d calories%n", tomato);
-        System.out.printf("- Rice drink (200ml): %d calories%n", riceDrink);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Kale turkey roll (150g): %d calories%n", kaleTurkey);
+        TypewriterEffectPrinter.printf("- Millet rice (100g): %d calories%n", milletRice);
+        TypewriterEffectPrinter.printf("- Tomato (100g): %d calories%n", tomato);
+        TypewriterEffectPrinter.printf("- Rice drink (200ml): %d calories%n", riceDrink);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Dried walnuts (50g): %d calories%n", walnuts);
-        System.out.printf("- Cashews (10g): %d calories%n", cashews);
-        System.out.printf("- Cherry (100g): %d calories%n", cherry);
-        System.out.printf("- Almonds (10g): %d calories%n", almonds);
-        System.out.printf("- Blueberries (100g): %d calories%n", blueberries);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Dried walnuts (50g): %d calories%n", walnuts);
+        TypewriterEffectPrinter.printf("- Cashews (10g): %d calories%n", cashews);
+        TypewriterEffectPrinter.printf("- Cherry (100g): %d calories%n", cherry);
+        TypewriterEffectPrinter.printf("- Almonds (10g): %d calories%n", almonds);
+        TypewriterEffectPrinter.printf("- Blueberries (100g): %d calories%n", blueberries);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 
-    public void c19(){
+    public void c19() {
         // 定义变量
         String breakfast = "Breakfast:";
         String lunch = "Lunch:";
@@ -611,37 +613,37 @@ public class PrintContent {
         int totalCalories = breakfastTotal + lunchTotal + dinnerTotal + snacksTotal;
 
         // 输出内容
-        System.out.println(breakfast);
-        System.out.printf("- Corn bread (50g): %d calories%n", cornBread);
-        System.out.printf("- Butter (10g): %d calories%n", butter);
-        System.out.printf("- Strawberry jam (20g): %d calories%n", jam);
-        System.out.printf("- Ham (50g): %d calories%n", ham);
-        System.out.printf("- Orange (150g): %d calories%n", orange);
-        System.out.printf("- Soy milk (200ml): %d calories%n", soyMilk);
-        System.out.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
+        TypewriterEffectPrinter.println(breakfast);
+        TypewriterEffectPrinter.printf("- Corn bread (50g): %d calories%n", cornBread);
+        TypewriterEffectPrinter.printf("- Butter (10g): %d calories%n", butter);
+        TypewriterEffectPrinter.printf("- Strawberry jam (20g): %d calories%n", jam);
+        TypewriterEffectPrinter.printf("- Ham (50g): %d calories%n", ham);
+        TypewriterEffectPrinter.printf("- Orange (150g): %d calories%n", orange);
+        TypewriterEffectPrinter.printf("- Soy milk (200ml): %d calories%n", soyMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", breakfast, breakfastTotal);
 
-        System.out.println(lunch);
-        System.out.printf("- Spicy shredded potato (150g): %d calories%n", potato);
-        System.out.printf("- Noodles (100g): %d calories%n", noodles);
-        System.out.printf("- Lettuce (100g): %d calories%n", lettuce);
-        System.out.printf("- Milk (200ml): %d calories%n", milk);
-        System.out.printf("%s: %d calories%n%n", lunch, lunchTotal);
+        TypewriterEffectPrinter.println(lunch);
+        TypewriterEffectPrinter.printf("- Spicy shredded potato (150g): %d calories%n", potato);
+        TypewriterEffectPrinter.printf("- Noodles (100g): %d calories%n", noodles);
+        TypewriterEffectPrinter.printf("- Lettuce (100g): %d calories%n", lettuce);
+        TypewriterEffectPrinter.printf("- Milk (200ml): %d calories%n", milk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", lunch, lunchTotal);
 
-        System.out.println(dinner);
-        System.out.printf("- Grilled salmon (100g): %d calories%n", salmon);
-        System.out.printf("- Potato (100g): %d calories%n", potato2);
-        System.out.printf("- Spinach (100g): %d calories%n", spinach);
-        System.out.printf("- Coconut milk (200ml): %d calories%n", coconutMilk);
-        System.out.printf("%s: %d calories%n%n", dinner, dinnerTotal);
+        TypewriterEffectPrinter.println(dinner);
+        TypewriterEffectPrinter.printf("- Grilled salmon (100g): %d calories%n", salmon);
+        TypewriterEffectPrinter.printf("- Potato (100g): %d calories%n", potato2);
+        TypewriterEffectPrinter.printf("- Spinach (100g): %d calories%n", spinach);
+        TypewriterEffectPrinter.printf("- Coconut milk (200ml): %d calories%n", coconutMilk);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", dinner, dinnerTotal);
 
-        System.out.println(snacks);
-        System.out.printf("- Dried blueberries (50g): %d calories%n", blueberries);
-        System.out.printf("- Sunflower seeds (10g): %d calories%n", sunflowerSeeds);
-        System.out.printf("- Grapefruit (150g): %d calories%n", grapefruit);
-        System.out.printf("- Pecans (10g): %d calories%n", pecans);
-        System.out.printf("- Pineapple (100g): %d calories%n", pineapple);
-        System.out.printf("%s: %d calories%n%n", snacks, snacksTotal);
+        TypewriterEffectPrinter.println(snacks);
+        TypewriterEffectPrinter.printf("- Dried blueberries (50g): %d calories%n", blueberries);
+        TypewriterEffectPrinter.printf("- Sunflower seeds (10g): %d calories%n", sunflowerSeeds);
+        TypewriterEffectPrinter.printf("- Grapefruit (150g): %d calories%n", grapefruit);
+        TypewriterEffectPrinter.printf("- Pecans (10g): %d calories%n", pecans);
+        TypewriterEffectPrinter.printf("- Pineapple (100g): %d calories%n", pineapple);
+        TypewriterEffectPrinter.printf("%s: %d calories%n%n", snacks, snacksTotal);
 
-        System.out.printf("%s: %d calories%n", total, totalCalories);
+        TypewriterEffectPrinter.printf("%s: %d calories%n", total, totalCalories);
     }
 }

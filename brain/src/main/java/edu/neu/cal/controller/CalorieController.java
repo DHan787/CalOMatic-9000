@@ -34,7 +34,7 @@ public class CalorieController {
 
     public static void defaultOperation() {
 
-        TypewriterEffectPrinter.println("Here is your eating history:");
+        TypewriterEffectPrinter.println("\nHere is your eating history:");
         showCalorieHistory();
         TypewriterEffectPrinter.println("Here is your calorie intake last week:");
 
@@ -64,7 +64,7 @@ public class CalorieController {
                 .collect(Collectors.groupingBy(
                         fh -> fh.getTimestamp().toLocalDateTime().toLocalDate(),
                         Collectors.mapping(FoodHistory::getamount, Collectors.toList())));
-        System.out.println(amountsByDate.toString());
+        // TypewriterEffectPrinter.println(amountsByDate.toString());
 
         Map<LocalDate, List<Double>> groupedAmounts = foodHistories.stream()
                 .collect(Collectors.groupingBy(
@@ -86,28 +86,28 @@ public class CalorieController {
         }
 
         // Print the amountsByDateList
-        for (Double[] amountsArray : amountsByDateList) {
-            for (Double amount : amountsArray) {
-                System.out.print(amount + " ");
-            }
-            System.out.println();
-        }
+        // for (Double[] amountsArray : amountsByDateList) {
+        // for (Double amount : amountsArray) {
+        // TypewriterEffectPrinter.print(amount + " ");
+        // }
+        // System.out.println();
+        // }
 
         HealthGoalPlan plan = new HealthGoalPlan(userProfile, 5, 0.1);
         HealthGoalPlanImpl imp = new HealthGoalPlanImpl(plan);
-        System.out.println(imp);
-        for (Double[] amountsArray : amountsByDateList) {
-            for (Double amount : amountsArray) {
-                System.out.print(amount + " ");
-            }
-            System.out.println();
-        }
+        // for (Double[] amountsArray : amountsByDateList) {
+        // for (Double amount : amountsArray) {
+        // TypewriterEffectPrinter.print(amount + " ");
+        // }
+        // System.out.println();
+        // }
 
         for (int i = 0; i < amountsByDateList.size(); i++) {
             double[] amountsArray = Arrays.stream(amountsByDateList.get(i)).mapToDouble(Double::doubleValue).toArray();
             imp.updateAllForOneDay(foodsByDateList.get(i), amountsArray, i + 1);
         }
-        System.out.println(imp);
+
+        TypewriterEffectPrinter.println(Arrays.toString(imp.getActualCalorieIntake()));
 
     }
 
@@ -134,7 +134,7 @@ public class CalorieController {
             formattedOutput.append("\n");
         }
 
-        System.out.println(formattedOutput.toString());
+        TypewriterEffectPrinter.println(formattedOutput.toString());
     }
 
 }

@@ -78,7 +78,6 @@ public class UserProfileDao {
 
     // update user profile
     public void addUserProfile(UserProfile UserProfile) {
-        System.out.println(UserProfile.toString());
 
         String sql = "INSERT INTO userprofile (name, sex, stringsex, weight, height, age, bmi, bmr, bodyfatrate, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -91,7 +90,6 @@ public class UserProfileDao {
             pstmt.setDouble(7, UserProfile.getBmi());
             pstmt.setDouble(8, UserProfile.getBmr());
             pstmt.setDouble(9, UserProfile.getBodyFatRate());
-            System.out.println(UserProfile.getId());
             pstmt.setString(10, UserProfile.getId());
 
             pstmt.executeUpdate();
