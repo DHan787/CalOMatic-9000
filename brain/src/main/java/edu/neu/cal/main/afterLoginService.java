@@ -36,16 +36,21 @@ public class afterLoginService {
         // 4. get the dietary advice
         boolean operation = true;
 
-        TypewriterEffectPrinter.println("What can CalOMatic do for you?");
-        TypewriterEffectPrinter.println("1. Check or change the user profile");
-        TypewriterEffectPrinter.println("2. Check the calories intake history");
-        TypewriterEffectPrinter.println("3. Input the food you eat today");
-        TypewriterEffectPrinter.println("4. Get the dietary advice");
-        TypewriterEffectPrinter.println("5. Exit");
-
         try (Scanner scanner = new Scanner(System.in)) {
             while (operation) {
-                String input = scanner.nextLine();
+
+                TypewriterEffectPrinter.println("What can CalOMatic do for you?");
+                TypewriterEffectPrinter.println("1. Check or change the user profile");
+                TypewriterEffectPrinter.println("2. Check the calories intake history");
+                TypewriterEffectPrinter.println("3. Input the food you eat today");
+                TypewriterEffectPrinter.println("4. Get the dietary advice");
+                TypewriterEffectPrinter.println("5. Exit");
+                String input = "";
+                if (scanner.hasNext()) {
+                    input = scanner.nextLine();
+                } else {
+                    break;
+                }
 
                 // 检查用户是否输入了 "exit"
                 if ("exit".equalsIgnoreCase(input.trim())) {

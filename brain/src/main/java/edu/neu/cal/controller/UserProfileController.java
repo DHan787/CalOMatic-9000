@@ -21,23 +21,27 @@ public class UserProfileController {
     private static UserProfileDao userProfileDao;
 
     public static void defaultOperation() {
-
+        Scanner scanner = new Scanner(System.in);
         // 让用户选择操作
         // 1. 查看个人信息
         // 2. 修改个人信息
         // 3. 返回上一级
         // 4. 退出系统
-        Scanner scanner = new Scanner(System.in);
         while (true) {
-
             boolean operation = true;
             while (operation) {
+
                 TypewriterEffectPrinter.println("Please select your operation:");
-                TypewriterEffectPrinter.println("1. View your profile");
+                TypewriterEffectPrinter.println("1. View your profile.");
                 TypewriterEffectPrinter.println("2. Modify your profile");
                 TypewriterEffectPrinter.println("3. Back to previous menu");
                 TypewriterEffectPrinter.println("4. Exit");
-                String input = scanner.nextLine();
+                String input = "";
+                if (scanner.hasNext()) {
+                    input = scanner.nextLine();
+                } else {
+                    break;
+                }
 
                 // 检查用户是否输入了 "exit"
                 if ("exit".equalsIgnoreCase(input.trim())) {
@@ -61,6 +65,7 @@ public class UserProfileController {
                         modifyProfile();
                         break;
                     case 3:
+                        operation = false;
                         return;
                     case 4:
                         System.exit(0);
@@ -68,13 +73,12 @@ public class UserProfileController {
                         TypewriterEffectPrinter.println("Invalid input, please try again.");
                         break;
                 }
-
+                // scanner.close();
             }
         }
     }
 
-    private static void modifyProfile() {
-        // ask the user what they want to do next
+    private static void modifyProfile() {// ask the user what they want to do next
         // 1.change their name
         // 2.change their age
         // 3.change their height
@@ -83,6 +87,7 @@ public class UserProfileController {
         while (true) {
             boolean operation = true;
             while (operation) {
+
                 TypewriterEffectPrinter.println("Please select your operation:");
                 TypewriterEffectPrinter.println("1. Change your name");
                 TypewriterEffectPrinter.println("2. Change your age");
@@ -90,7 +95,12 @@ public class UserProfileController {
                 TypewriterEffectPrinter.println("4. Change your weight");
                 TypewriterEffectPrinter.println("5. Back to previous menu");
 
-                String input = scanner.nextLine();
+                String input = "";
+                if (scanner.hasNext()) {
+                    input = scanner.nextLine();
+                } else {
+                    break;
+                }
 
                 // 检查用户是否输入了 "exit"
                 if ("exit".equalsIgnoreCase(input.trim())) {
@@ -117,11 +127,13 @@ public class UserProfileController {
                         modifyHeight();
                     case 4:
                         modifyWeight();
+                    case 5:
+                        return;
                     default:
                         TypewriterEffectPrinter.println("Invalid input, please try again.");
                         break;
                 }
-
+                // scanner.close();
             }
         }
     }
@@ -148,7 +160,7 @@ public class UserProfileController {
         } else {
             TypewriterEffectPrinter.println("Invalid input, please try again.");
         }
-
+        scanner.close();
     }
 
     private static void modifyWeight() {
@@ -173,6 +185,7 @@ public class UserProfileController {
         } else {
             TypewriterEffectPrinter.println("Invalid input, please try again.");
         }
+        // scanner.close();
 
     }
 
@@ -200,7 +213,7 @@ public class UserProfileController {
         } else {
             TypewriterEffectPrinter.println("Now redirect to previous menu!");
         }
-
+        scanner.close();
     }
 
     private static void addUserProfile() {
@@ -255,7 +268,7 @@ public class UserProfileController {
         TypewriterEffectPrinter.println(userProfile.toFormatString());
         userProfileDao.addUserProfile(userProfile);
         userProfileDao.close();
-        scanner.close();
+        // scanner.close();
     }
 
     /**

@@ -55,7 +55,8 @@ public class authService {
                         return user;
                     } else {
                         TypewriterEffectPrinter.print("The username or password is incorrect. Please try again");
-                        loginUser(scanner);
+                        user = loginUser(scanner);
+                        return user;
                     }
                 } else {
                     TypewriterEffectPrinter.print("The username not exist. Do you want to register?");
@@ -70,8 +71,8 @@ public class authService {
 
                             case 2:
                                 TypewriterEffectPrinter.print("Now redirect to login!");
-                                loginUser(scanner);
-                                break;
+                                user = loginUser(scanner);
+                                return user;
 
                             default:
                                 System.out.println("Invalid operation, re-enter!");
