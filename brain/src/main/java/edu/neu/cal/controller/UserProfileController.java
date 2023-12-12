@@ -81,12 +81,6 @@ public class UserProfileController {
         // 4.change their weight
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            TypewriterEffectPrinter.println("Please select your operation:");
-            TypewriterEffectPrinter.println("1. Change your name");
-            TypewriterEffectPrinter.println("2. Change your age");
-            TypewriterEffectPrinter.println("3. Change your height");
-            TypewriterEffectPrinter.println("4. Change your weight");
-            TypewriterEffectPrinter.println("5. Back to previous menu");
             boolean operation = true;
             while (operation) {
                 TypewriterEffectPrinter.println("Please select your operation:");
