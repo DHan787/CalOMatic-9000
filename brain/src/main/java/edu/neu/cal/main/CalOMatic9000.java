@@ -34,7 +34,8 @@ public class CalOMatic9000 {
         System.out.println(user.toString());
         UserProfileController userProfileController = new UserProfileController();
         afterLoginService.afterLogin();
-        TypewriterEffectPrinter.println("Welcome to CalOMatic9000, " + user.getname() + "!");
+        // say goodbye to the user
+        TypewriterEffectPrinter.println("Goodbye " + user.getname() + "!");
 
     }
 }

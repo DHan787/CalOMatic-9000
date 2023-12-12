@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test1",
+            "request": "launch",
+            "mainClass": "edu.neu.cal.test.test1",
+            "projectName": "brain"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

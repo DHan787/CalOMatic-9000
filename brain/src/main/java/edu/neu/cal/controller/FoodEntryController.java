@@ -69,6 +69,7 @@ public class FoodEntryController {
 
                 double amountDouble = Double.parseDouble(amount);
                 foodEntry.addFood(user.getId(), input, amountDouble);
+                TypewriterEffectPrinter.println("Successfully added!");
 
             } else {
                 TypewriterEffectPrinter.println("Sorry, we don't have this food in our database");

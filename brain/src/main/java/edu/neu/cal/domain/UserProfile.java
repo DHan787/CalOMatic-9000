@@ -83,6 +83,10 @@ public class UserProfile {
         this.bmr = calcuBmr();
     }
 
+    public UserProfile() {
+
+    }
+
     /**
      * 计算BMI
      * 
