@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import edu.neu.cal.Dbconnector.DbAccess;
 import edu.neu.cal.domain.User;
+import edu.neu.cal.main.CalOMatic9000;
 import edu.neu.cal.utils.PassowordHashingByBCrypt;
 import edu.neu.cal.utils.TypewriterEffectPrinter;
 
@@ -148,6 +149,7 @@ public class authService {
         authUser.insertTable(registerUsername, registerEmail, registerPassword);
         // go back to login
         TypewriterEffectPrinter.print("\nNow redirect to login!");
-        loginUser(scanner);
+        CalOMatic9000.setUser(loginUser(scanner));
+        ;
     }
 }

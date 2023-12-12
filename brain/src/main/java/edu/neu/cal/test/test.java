@@ -10,13 +10,16 @@ import edu.neu.cal.Dbconnector.DbAccess;
 import edu.neu.cal.dao.UserProfileDao;
 import edu.neu.cal.domain.User;
 import edu.neu.cal.domain.UserProfile;
+import edu.neu.cal.utils.InputHandler;
 
 public class test {
     public static void main(String[] args) {
-        UserProfileDao userProfileDao = new UserProfileDao();
-        UserProfile userProfile = userProfileDao.getUserProfileByName("Bob");
-        userProfileDao.close();
-        System.out.println(userProfile.toString());
+        System.out.println(InputHandler.handleInput("23", Integer.class, Integer::parseInt));
+
+        // UserProfileDao userProfileDao = new UserProfileDao();
+        // UserProfile userProfile = userProfileDao.getUserProfileByName("Bob");
+        // userProfileDao.close();
+        // System.out.println(userProfile.toString());
         // 注意，access 类应该只做数据库连接，查询数据应该由DAO层的类去完成，这里仅做演示和方便使用
     }
 }

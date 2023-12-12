@@ -5,6 +5,8 @@ package edu.neu.cal.domain;
  * @since 2023/11/26
  */
 public class UserProfile {
+
+    private String id;
     /**
      * 用户名
      */
@@ -54,7 +56,9 @@ public class UserProfile {
      */
     final String female = "female";
 
-    public UserProfile(int age, String stringSex, String useName, double weight, double height, double bodyFatRate) {
+    public UserProfile(String id, int age, String stringSex, String useName, double weight, double height,
+            double bodyFatRate) {
+        this.id = id;
         this.userName = useName;
         this.weight = weight;
         this.height = height;
@@ -206,6 +210,14 @@ public class UserProfile {
         this.bodyFatRate = bodyFatRate;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     // 将这tostring改成表格形式
     public String toFormatString() {
 
@@ -219,7 +231,7 @@ public class UserProfile {
     }
 
     public String toString() {
-        return "UserName:" + userName + ", Age:" + age + ", Sex:" + stringSex + ", Weight:" + weight +
+        return "Id" + id + "UserName:" + userName + ", Age:" + age + ", Sex:" + stringSex + ", Weight:" + weight +
                 ", Height" + height + ", BMI:" + bmi + ", BMR:" + bmr + ", Body Fat Rate:" + bodyFatRate;
     }
 }

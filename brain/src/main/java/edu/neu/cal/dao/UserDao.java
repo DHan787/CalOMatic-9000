@@ -190,6 +190,18 @@ public class UserDao {
         }
     }
 
+    public void modidifyName(String oldname, String newname) {
+        String sql = "UPDATE users SET name = ? WHERE name = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+
+            pstmt.setString(1, newname);
+            pstmt.setString(2, oldname);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void updateUser(User user) {
         String sql = "UPDATE users SET id = ?, password = ?, email = ? WHERE name = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {

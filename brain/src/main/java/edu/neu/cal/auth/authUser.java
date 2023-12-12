@@ -13,6 +13,7 @@ import java.util.Scanner;
 
 import edu.neu.cal.Dbconnector.DbAccess;
 import edu.neu.cal.domain.User;
+import edu.neu.cal.main.CalOMatic9000;
 import edu.neu.cal.utils.PassowordHashingByBCrypt;
 import edu.neu.cal.utils.UUIDGen;
 
@@ -33,7 +34,14 @@ public class authUser {
         while (operation) {
             String input = scanner.nextLine();
 
+            user = CalOMatic9000.getUser();
+
             // 检查用户是否输入了 "exit"
+
+            if (user != null) {
+                System.out.println("Wlecome back, " + user.getname() + "!");
+                break;
+            }
             if ("exit".equalsIgnoreCase(input.trim())) {
                 System.out.println("Exiting...");
                 break; // 退出 while 循环
@@ -51,11 +59,13 @@ public class authUser {
             switch (CaseOperation) {
                 case 1:
                     this.user = authService.loginUser(scanner);
-                    System.out.println(this.user.toString());
+                    CalOMatic9000.setUser(this.user);
+                    // System.out.println(this.user.toString());
                     operation = false;
                     break;
                 case 2:
                     authService.registerUser(scanner);
+                    operation = false;
                     break;
                 default:
                     System.out.println("Invalid operation, re-enter!");
@@ -64,7 +74,7 @@ public class authUser {
     }
 
     // insert the registered information into the database for login
-    public void insertTable(String registerUsername, String registerEmail, String registerPassword) {
+    public String insertTable(String registerUsername, String registerEmail, String registerPassword) {
         Connection connection = null;
         DbAccess dbAccess = new DbAccess();
         connection = dbAccess.getConnection();
@@ -83,5 +93,6 @@ public class authUser {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return UUID;
     }
 }

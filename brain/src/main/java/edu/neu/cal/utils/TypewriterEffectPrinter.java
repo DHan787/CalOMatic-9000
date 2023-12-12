@@ -13,7 +13,7 @@ public class TypewriterEffectPrinter {
             System.out.print(c);
             // 模拟打字机效果
             try {
-                Thread.sleep(25); // 50毫秒的延迟
+                Thread.sleep(0); // 50毫秒的延迟
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

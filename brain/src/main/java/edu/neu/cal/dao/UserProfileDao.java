@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import edu.neu.cal.Dbconnector.DbAccess;
 import edu.neu.cal.domain.User;
 import edu.neu.cal.domain.UserProfile;
+import edu.neu.cal.utils.TypewriterEffectPrinter;
 
 public class UserProfileDao {
     private DbAccess myAccess;
@@ -22,7 +23,6 @@ public class UserProfileDao {
     public UserProfileDao() {
         this.myAccess = new DbAccess();
         this.connection = this.myAccess.getConnection();
-        System.out.println("UserProfileDao");
     }
 
     public void close() {
@@ -76,8 +76,9 @@ public class UserProfileDao {
 
     // update user profile
     public void addUserProfile(UserProfile UserProfile) {
+        System.out.println(UserProfile.toString());
 
-        String sql = "INSERT INTO userprofile (name, sex, stringsex, weight, height, age, bmi, bmr, bodyfatrate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO userprofile (name, sex, stringsex, weight, height, age, bmi, bmr, bodyfatrate, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, UserProfile.getUserName());
             pstmt.setInt(2, UserProfile.getSex());
@@ -88,6 +89,8 @@ public class UserProfileDao {
             pstmt.setDouble(7, UserProfile.getBmi());
             pstmt.setDouble(8, UserProfile.getBmr());
             pstmt.setDouble(9, UserProfile.getBodyFatRate());
+            System.out.println(UserProfile.getId());
+            pstmt.setString(10, UserProfile.getId());
 
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -200,5 +203,24 @@ public class UserProfileDao {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    // find user profile by name
+    public boolean findUserProfileByName(String name) {
+        String sql = "SELECT * FROM userprofile WHERE name = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setString(1, name);
+            ResultSet rs = pstmt.executeQuery();
+            if (!rs.next()) {
+                return false;
+            } else {
+                TypewriterEffectPrinter.println("GOT U!");
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return false;
     }
 }
