@@ -46,7 +46,9 @@ public class UserProfileDao {
             rs = pstmt.executeQuery();
             // 处理结果集
             if (rs.next()) {
-                UserProfile userProfile = new UserProfile(rs.getInt("age"),
+                UserProfile userProfile = new UserProfile(
+                        rs.getString("id"),
+                        rs.getInt("age"),
                         rs.getInt("sex"),
                         name,
                         rs.getDouble("weight"),
