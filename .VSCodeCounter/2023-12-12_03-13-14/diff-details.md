@@ -1,0 +1,32 @@
+# Diff Details
+
+Date : 2023-12-12 03:13:14
+
+Directory e:\\NEU\\CalOMatic 9000
+
+Total : 17 files,  -34 codes, 13 comments, 4 blanks, all -17 lines
+
+[Summary](results.md) / [Details](details.md) / [Diff Summary](diff.md) / Diff Details
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [brain/src/main/java/edu/neu/cal/controller/CalorieController.java](/brain/src/main/java/edu/neu/cal/controller/CalorieController.java) | Java | -14 | 13 | 1 | 0 |
+| [brain/src/main/java/edu/neu/cal/controller/UserProfileController.java](/brain/src/main/java/edu/neu/cal/controller/UserProfileController.java) | Java | -5 | 0 | 0 | -5 |
+| [brain/src/main/java/edu/neu/cal/dao/UserProfileDao.java](/brain/src/main/java/edu/neu/cal/dao/UserProfileDao.java) | Java | -2 | 0 | 0 | -2 |
+| [brain/src/main/java/edu/neu/cal/domain/HealthGoalPlanImpl.java](/brain/src/main/java/edu/neu/cal/domain/HealthGoalPlanImpl.java) | Java | -1 | 0 | 0 | -1 |
+| [brain/src/main/java/edu/neu/cal/domain/PrintContent.java](/brain/src/main/java/edu/neu/cal/domain/PrintContent.java) | Java | 1 | 0 | 1 | 2 |
+| [brain/src/main/java/edu/neu/cal/main/CalOMatic9000.java](/brain/src/main/java/edu/neu/cal/main/CalOMatic9000.java) | Java | -3 | 0 | 0 | -3 |
+| [brain/src/main/java/edu/neu/cal/utils/TypewriterEffectPrinter.java](/brain/src/main/java/edu/neu/cal/utils/TypewriterEffectPrinter.java) | Java | 6 | 0 | 2 | 8 |
+| [brain/target/classes/edu/neu/cal/controller/AdvisorController.class](/brain/target/classes/edu/neu/cal/controller/AdvisorController.class) | Java | 1 | 0 | 0 | 1 |
+| [brain/target/classes/edu/neu/cal/controller/CalorieController.class](/brain/target/classes/edu/neu/cal/controller/CalorieController.class) | Java | -16 | 0 | 0 | -16 |
+| [brain/target/classes/edu/neu/cal/controller/FoodEntryController.class](/brain/target/classes/edu/neu/cal/controller/FoodEntryController.class) | Java | -2 | 0 | 0 | -2 |
+| [brain/target/classes/edu/neu/cal/controller/UserProfileController.class](/brain/target/classes/edu/neu/cal/controller/UserProfileController.class) | Java | -1 | 0 | 0 | -1 |
+| [brain/target/classes/edu/neu/cal/dao/UserProfileDao.class](/brain/target/classes/edu/neu/cal/dao/UserProfileDao.class) | Java | -5 | 0 | 0 | -5 |
+| [brain/target/classes/edu/neu/cal/domain/HealthGoalPlanImpl.class](/brain/target/classes/edu/neu/cal/domain/HealthGoalPlanImpl.class) | Java | 2 | 0 | 0 | 2 |
+| [brain/target/classes/edu/neu/cal/domain/PrintContent.class](/brain/target/classes/edu/neu/cal/domain/PrintContent.class) | Java | -4 | 0 | 0 | -4 |
+| [brain/target/classes/edu/neu/cal/main/CalOMatic9000.class](/brain/target/classes/edu/neu/cal/main/CalOMatic9000.class) | Java | -1 | 0 | 0 | -1 |
+| [brain/target/classes/edu/neu/cal/main/afterLoginService.class](/brain/target/classes/edu/neu/cal/main/afterLoginService.class) | Java | 1 | 0 | 0 | 1 |
+| [brain/target/classes/edu/neu/cal/utils/TypewriterEffectPrinter.class](/brain/target/classes/edu/neu/cal/utils/TypewriterEffectPrinter.class) | Java | 9 | 0 | 0 | 9 |
+
+[Summary](results.md) / [Details](details.md) / [Diff Summary](diff.md) / Diff Details

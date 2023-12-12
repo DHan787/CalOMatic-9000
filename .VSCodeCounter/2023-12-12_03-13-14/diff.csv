@@ -1,0 +1,19 @@
+"filename", "language", "Java", "comment", "blank", "total"
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\controller\CalorieController.java", "Java", -14, 13, 1, 0
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\controller\UserProfileController.java", "Java", -5, 0, 0, -5
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\dao\UserProfileDao.java", "Java", -2, 0, 0, -2
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\domain\HealthGoalPlanImpl.java", "Java", -1, 0, 0, -1
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\domain\PrintContent.java", "Java", 1, 0, 1, 2
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\main\CalOMatic9000.java", "Java", -3, 0, 0, -3
+"e:\NEU\CalOMatic 9000\brain\src\main\java\edu\neu\cal\utils\TypewriterEffectPrinter.java", "Java", 6, 0, 2, 8
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\controller\AdvisorController.class", "Java", 1, 0, 0, 1
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\controller\CalorieController.class", "Java", -16, 0, 0, -16
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\controller\FoodEntryController.class", "Java", -2, 0, 0, -2
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\controller\UserProfileController.class", "Java", -1, 0, 0, -1
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\dao\UserProfileDao.class", "Java", -5, 0, 0, -5
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\domain\HealthGoalPlanImpl.class", "Java", 2, 0, 0, 2
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\domain\PrintContent.class", "Java", -4, 0, 0, -4
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\main\CalOMatic9000.class", "Java", -1, 0, 0, -1
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\main\afterLoginService.class", "Java", 1, 0, 0, 1
+"e:\NEU\CalOMatic 9000\brain\target\classes\edu\neu\cal\utils\TypewriterEffectPrinter.class", "Java", 9, 0, 0, 9
+"Total", "-", -34, 13, 4, -17

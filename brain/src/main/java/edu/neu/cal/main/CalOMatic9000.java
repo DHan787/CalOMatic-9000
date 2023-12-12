@@ -25,7 +25,7 @@ public class CalOMatic9000 {
         CalOMatic9000.user = user;
     }
 
-    public static void main(String[] args) {
+    public static void CalOMatic9000() {
         authUser authUser = new authUser();
         showWelcomeScreen.showWelcomeScreen();
         authUser.userOperation();
