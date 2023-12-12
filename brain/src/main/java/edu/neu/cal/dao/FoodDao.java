@@ -16,7 +16,7 @@ public class FoodDao {
 
     private Connection connection;
 
-    public void Food() {
+    public FoodDao() {
         this.myAccess = new DbAccess();
         this.connection = this.myAccess.getConnection();
     }
@@ -26,13 +26,14 @@ public class FoodDao {
     }
 
     public void addFood(Food entry) {
-        // TODO: 假如用杨的表，这行得再加几个参数
-        String sql = "INSERT INTO food_entries (name, calories, protien) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO food (foodName, Calories, Protein, Carb,  Fat) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
             pstmt.setString(1, entry.getFoodName());
             pstmt.setInt(2, entry.getCalories());
             pstmt.setDouble(3, entry.getFoodProtein());
+            pstmt.setDouble(4, entry.getFoodCarb());
+            pstmt.setDouble(5, entry.getFoodFat());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -66,7 +67,7 @@ public class FoodDao {
 
         try {
             // 准备sql语句
-            String sql = "SELECT calories FROM Food WHERE foodName = ?";
+            String sql = "SELECT calories FROM food WHERE foodName = ?";
 
             pstmt = this.connection.prepareStatement(sql);
             // 设置参数
@@ -106,7 +107,7 @@ public class FoodDao {
 
         try {
             // 准备sql语句
-            String sql = "SELECT protein FROM Food WHERE foodName = ?";
+            String sql = "SELECT protein FROM food WHERE foodName = ?";
 
             pstmt = this.connection.prepareStatement(sql);
             // 设置参数
@@ -138,7 +139,7 @@ public class FoodDao {
     }
 
     public void updateFood(Food entry) {
-        String sql = "UPDATE food_entries SET name = ?, calories = ? WHERE id = ?";
+        String sql = "UPDATE food SET foodName = ?, Calories = ? WHERE id = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
             pstmt.setString(1, entry.getFoodName());
@@ -151,7 +152,7 @@ public class FoodDao {
     }
 
     public void deleteFood(int id) {
-        String sql = "DELETE FROM food_entries WHERE id = ?";
+        String sql = "DELETE FROM food WHERE id = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
             pstmt.setInt(1, id);
@@ -159,5 +160,22 @@ public class FoodDao {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public Boolean findFoodByName(String name) {
+        String sql = "SELECT * FROM food WHERE foodName = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+
+            pstmt.setString(1, name);
+            ResultSet rs = pstmt.executeQuery();
+            if (!rs.next()) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
     }
 }

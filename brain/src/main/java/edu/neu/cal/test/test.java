@@ -14,7 +14,7 @@ import edu.neu.cal.utils.InputHandler;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println(InputHandler.handleInput("23", Integer.class, Integer::parseInt));
+        System.out.println(InputHandler.handleInput("200.0", Double.class, Double::parseDouble));
 
         // UserProfileDao userProfileDao = new UserProfileDao();
         // UserProfile userProfile = userProfileDao.getUserProfileByName("Bob");

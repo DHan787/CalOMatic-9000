@@ -45,6 +45,14 @@ public class Food {
         this.foodFat = foodFat;
     }
 
+    public Food(String name, String calories2, String carbohydrates, String protein, String fat) {
+        this.foodName = name;
+        this.calories = Integer.parseInt(calories2);
+        this.foodProtein = Double.parseDouble(protein);
+        this.foodCarb = Double.parseDouble(carbohydrates);
+        this.foodFat = Double.parseDouble(fat);
+    }
+
     public int getFoodId() {
         return foodId;
     }
@@ -92,4 +100,5 @@ public class Food {
     public void setFoodFat(double foodFat) {
         this.foodFat = foodFat;
     }
+
 }
