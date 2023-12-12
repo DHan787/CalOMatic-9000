@@ -70,7 +70,8 @@ public class UserProfile {
         this.bmr = calcuBmr();
     }
 
-    public UserProfile(int age, int sex, String useName, double weight, double height, double bodyFatRate) {
+    public UserProfile(String id, int age, int sex, String useName, double weight, double height, double bodyFatRate) {
+        this.id = id;
         this.userName = useName;
         this.weight = weight;
         this.height = height;

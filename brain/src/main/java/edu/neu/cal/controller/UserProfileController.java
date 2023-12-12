@@ -29,14 +29,14 @@ public class UserProfileController {
         // 4. 退出系统
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            TypewriterEffectPrinter.println("Please select your operation:");
-            TypewriterEffectPrinter.println("1. View your profile");
-            TypewriterEffectPrinter.println("2. Modify your profile");
-            TypewriterEffectPrinter.println("3. Back to previous menu");
-            TypewriterEffectPrinter.println("4. Exit");
+
             boolean operation = true;
             while (operation) {
-
+                TypewriterEffectPrinter.println("Please select your operation:");
+                TypewriterEffectPrinter.println("1. View your profile");
+                TypewriterEffectPrinter.println("2. Modify your profile");
+                TypewriterEffectPrinter.println("3. Back to previous menu");
+                TypewriterEffectPrinter.println("4. Exit");
                 String input = scanner.nextLine();
 
                 // 检查用户是否输入了 "exit"
@@ -127,13 +127,79 @@ public class UserProfileController {
     }
 
     private static void modifyHeight() {
+        user = CalOMatic9000.getUser();
+        Scanner scanner = new Scanner(System.in);
+        TypewriterEffectPrinter.println("Please enter your new height:");
+        String input = scanner.next();
+        while (!InputHandler.handleInput(input, Double.class, Double::valueOf)) {
+            TypewriterEffectPrinter.println("Input incorrect, Please enter your new height:");
+            input = scanner.next();
+        }
+        double newHeight = Double.parseDouble(input);
+        TypewriterEffectPrinter.println("Do you want to change your height to " + newHeight + "?");
+        TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
+        input = scanner.next();
+        if ("yes".equalsIgnoreCase(input.trim())) {
+            UserProfileDao userProfileDao = new UserProfileDao();
+            userProfileDao.updateHeight(user.getname(), newHeight);
+            userProfileDao.close();
+        } else if ("no".equalsIgnoreCase(input.trim())) {
+            TypewriterEffectPrinter.println("Now redirect to previous menu!");
+        } else {
+            TypewriterEffectPrinter.println("Invalid input, please try again.");
+        }
 
     }
 
     private static void modifyWeight() {
+        user = CalOMatic9000.getUser();
+        Scanner scanner = new Scanner(System.in);
+        TypewriterEffectPrinter.println("Please enter your new weight:");
+        String input = scanner.next();
+        while (!InputHandler.handleInput(input, Double.class, Double::valueOf)) {
+            TypewriterEffectPrinter.println("Input incorrect, Please enter your new weight:");
+            input = scanner.next();
+        }
+        double newWeight = Double.parseDouble(input);
+        TypewriterEffectPrinter.println("Do you want to change your weight to " + newWeight + "?");
+        TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
+        input = scanner.next();
+        if ("yes".equalsIgnoreCase(input.trim())) {
+            UserProfileDao userProfileDao = new UserProfileDao();
+            userProfileDao.updateWeight(user.getname(), newWeight);
+            userProfileDao.close();
+        } else if ("no".equalsIgnoreCase(input.trim())) {
+            TypewriterEffectPrinter.println("Now redirect to previous menu!");
+        } else {
+            TypewriterEffectPrinter.println("Invalid input, please try again.");
+        }
+
     }
 
     private static void modifyAge() {
+        user = CalOMatic9000.getUser();
+        Scanner scanner = new Scanner(System.in);
+        TypewriterEffectPrinter.println("Please enter your new age:");
+        String input = scanner.next();
+        while (!InputHandler.handleInput(input, Integer.class, Integer::valueOf)) {
+            TypewriterEffectPrinter.println("Input incorrect, Please enter your new age:");
+            input = scanner.next();
+        }
+        int newAge = Integer.parseInt(input);
+        TypewriterEffectPrinter.println("Do you want to change your age to " + newAge + "?");
+        TypewriterEffectPrinter.println("Please enter 'yes' or 'no'");
+        input = scanner.next();
+        while (input != "yes" || input != "no") {
+            TypewriterEffectPrinter.println("Invalid input, please try again.");
+            input = scanner.next();
+        }
+        if ("yes".equalsIgnoreCase(input.trim())) {
+            UserProfileDao userProfileDao = new UserProfileDao();
+            userProfileDao.updateAge(user.getname(), newAge);
+            userProfileDao.close();
+        } else {
+            TypewriterEffectPrinter.println("Now redirect to previous menu!");
+        }
 
     }
 
@@ -192,6 +258,10 @@ public class UserProfileController {
         scanner.close();
     }
 
+    /**
+     * @description: view the user profile
+     * @return {*}
+     */
     private static void viewProfile() {
         userProfileDao = new UserProfileDao();
         user = CalOMatic9000.getUser();
@@ -205,6 +275,10 @@ public class UserProfileController {
         System.out.println(userprofile.toFormatString());
     }
 
+    /**
+     * @description: modify the user name
+     * @return {*}
+     */
     private static void modifyName() {
         User user = CalOMatic9000.getUser();
         Scanner scanner = new Scanner(System.in);
