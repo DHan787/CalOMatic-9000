@@ -1,7 +1,7 @@
-/*
- * @Author: Jiang Han
- * @Date: 2023-12-11 03:26:03
- * @Description: 
+/**
+ * This class represents the AdvisorController, which is responsible for providing personalized advice and creating a healthy diet plan for the user.
+ * It interacts with the User, UserProfileDao, UserProfile, and HealthGoalPlan classes to retrieve user information and generate recommendations.
+ * The defaultOperation method is the entry point for the advisor functionality and displays the eating suggestion based on the user's profile.
  */
 package edu.neu.cal.controller;
 
@@ -20,6 +20,11 @@ public class AdvisorController {
     static UserProfileDao userprofiledao;
     static UserProfile userprofile;
 
+    /**
+     * Performs the default operation of the AdvisorController.
+     * Retrieves the user's profile, generates a health goal plan, and displays the
+     * eating suggestion.
+     */
     public static void defaultOperation() {
         user = CalOMatic9000.getUser();
         userprofiledao = new UserProfileDao();
